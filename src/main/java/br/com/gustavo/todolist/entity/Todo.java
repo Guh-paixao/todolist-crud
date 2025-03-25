@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 
 @Entity
 @Table(name = "todos")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Todo {
     @Id
@@ -19,4 +19,14 @@ public class Todo {
     private String descricao;
     private boolean realizado;
     private int prioridade;
+
+    public Todo (String nome, String descricao, boolean realizado, int prioridade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.realizado = realizado;
+        this.prioridade = prioridade;
+    }
+
+    public Todo(long l, String s, String comentar, boolean b, int i) {
+    }
 }

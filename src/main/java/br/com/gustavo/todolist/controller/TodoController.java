@@ -3,6 +3,7 @@ package br.com.gustavo.todolist.controller;
 
 import br.com.gustavo.todolist.entity.Todo;
 import br.com.gustavo.todolist.service.TodoService;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
